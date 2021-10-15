@@ -16,7 +16,7 @@ export default function Item({
   console.log(`Item atual: ${JSON.stringify({ tarefa, tempo, selecionado, completado, id })}`)
   return (
     <li
-      className={style.item}
+      className={`${style.item} ${selecionado ? style.itemSelecionado : ''}`}
       onClick={() => selecionaTarefa(
         {
           tarefa,
